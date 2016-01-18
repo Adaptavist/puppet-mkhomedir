@@ -1,4 +1,5 @@
 # mkhomedir Module
+[![Build Status](https://travis-ci.org/Adaptavist/puppet-mkhomedir.svg?branch=master)](https://travis-ci.org/Adaptavist/puppet-mkhomedir)
 
 ## Overview
 
