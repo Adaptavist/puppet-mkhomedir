@@ -28,7 +28,7 @@ class mkhomedir (
 
     # Enable pam_mkhomedir
     case $::osfamily {
-        Debian: {
+        'Debian': {
             #create pam config file
             file { $pam_mkhomedir_file:
                 content => template("${name}/mkhomedir.erb"),
@@ -42,7 +42,7 @@ class mkhomedir (
                 require => File[$pam_mkhomedir_file]
             }
         }
-        RedHat: {
+        'RedHat': {
             #enable the pam_mkhomedir module
             if (!defined(Package[$authconfig_package])) {
                 package { $authconfig_package:
