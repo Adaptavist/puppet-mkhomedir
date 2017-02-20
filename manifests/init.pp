@@ -7,6 +7,7 @@ class mkhomedir (
     $skel                      = '/etc/skel',
     $home_basedir              = '/nethome',
     $home_basedir_link_target  = undef,
+    $authconfig_before_class   = false,
 
     )  {
 
@@ -24,6 +25,10 @@ class mkhomedir (
         file { $home_basedir:
             ensure => 'directory'
         }
+    }
+
+    if ($authconfig_before_class and $authconfig_before_class != false and $authconfig_before_class != 'false'){
+        Exec['enable_mkhomedir'] -> Class[$authconfig_before_class]
     }
 
     # Enable pam_mkhomedir
