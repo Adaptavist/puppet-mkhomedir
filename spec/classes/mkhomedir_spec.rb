@@ -85,7 +85,7 @@ describe 'mkhomedir', :type => 'class' do
     }
 
     it do
-      should raise_error(Puppet::Error, /mkhomedir - Unsupported Operating System family: Solaris at/)
+      should raise_error(Puppet::Error, /mkhomedir - Unsupported Operating System family: Solaris/)
     end
   end
 

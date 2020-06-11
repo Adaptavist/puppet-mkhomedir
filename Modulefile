@@ -1,5 +1,5 @@
 name 'adaptavist/mkhomedir'
-version '1.0.1'
+version '1.0.2'
 source 'https://github.com/Adaptavist/puppet-mkhomedir.git'
 author 'mhope'
 summary 'mkhomedir Module' 
